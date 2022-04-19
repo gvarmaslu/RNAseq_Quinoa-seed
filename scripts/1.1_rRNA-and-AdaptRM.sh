@@ -14,7 +14,7 @@ out_dir1=${work_dir}NG-14833_1.1_sort-trim/
 #####---Lane: NG-14833
 ################################
 
-cd ${work_dir}Asa-Grimberg_Quinoa-GATC-2018/
+cd ${work_dir}GATC-2018/
 #for nbr in Sample_484-10-1/; do
 #for nbr in NG-14833_*/; do
 #nbr=$(echo $nbr | sed 's=/[^/]*$==;s/\.$//')
@@ -25,7 +25,7 @@ mkdir ${out_dir1}${nbr}
 SORTMERNADIR=/bioinfo/sortmerna-2.1b
 TRIMMOMATIC=/bioinfo/Trimmomatic-0.36
 
-data_dir=${work_dir}Asa-Grimberg_Quinoa-GATC-2018/
+data_dir=${work_dir}GATC-2018/
 scripts=/bioinfo/sortmerna-2.1b/scripts/
 
 temp_dir=${out_dir1}${nbr}"/"

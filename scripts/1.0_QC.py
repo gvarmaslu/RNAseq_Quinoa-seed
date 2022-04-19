@@ -36,7 +36,7 @@ class SearchDB(fileHandler):
 		"""
 		Calling Search localsearch method
 		"""
-		INDIR=readdir+"Asa-Grimberg_Quinoa-GATC-2018"
+		INDIR=readdir+"Quinoa-GATC-2018"
 		OUTDIR=readdir+"NG-14833_1.0_QC"
 		if not os.path.exists(OUTDIR):
 			os.makedirs(OUTDIR)

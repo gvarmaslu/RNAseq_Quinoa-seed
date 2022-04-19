@@ -37,7 +37,7 @@ class SearchDB(fileHandler):
 		Calling Search localsearch method
 		"""
 		SCR="/home/gala0002/proj/RNAseq-analysis-run/scripts_quinoa/"
-		INDIR=readdir+"Asa-Grimberg_Quinoa-GATC-2018"
+		INDIR=readdir+"GATC-2018"
 		OUTDIR=readdir+"NG-14833_1.1_sort-trim"
 		if not os.path.exists(OUTDIR):
 			os.makedirs(OUTDIR)
