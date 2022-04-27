@@ -3,15 +3,13 @@ library(DESeq2)
 library(vsn)
 library("pheatmap")
 
+# Source code:
 #https://molbiocloud.com/help/tiki-index.php?page=Differential-Expression-Analysis-Using-DESeq2#Differential_Expression_Analysis_Using_DESeq2
 #https://shiring.github.io/rna-seq/deseq2/teaching/2016/09/29/DESeq2-course
 #http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html#heatmap-of-the-sample-to-sample-distances
 
-#res = read.table("/Volumes/Seagate/Backup-MAC_HD2/proj_Santosh/scripts/Trans.isoform.counts.matrix.AtgamFem_vs_AtgamMale.DESeq2.DE_results",sep="\t", header = TRUE, row.names = 1)
-#res[ , !(names(res) %in% c("sampleA","sampleB","baseMeanA","baseMeanB") )]
 
 #Importing the files  
-#outdir_plot="/Volumes/Seagate/Backup-MAC_HD2/proj_dir/NG-14833_4.3_DEG_results/Results_plots/"
 outdir_plot="/Volumes/Mac_HD2/proj_dir/NG-14833_8.0_heatmaps/"
 
 dir.create(file.path(outdir_plot), showWarnings = F, recursive = FALSE)

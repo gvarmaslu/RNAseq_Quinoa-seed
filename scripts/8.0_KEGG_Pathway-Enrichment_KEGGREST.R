@@ -92,12 +92,6 @@ outdat$Annotated_genelist <- pVals.by.pathway[,"Annotated_genelist"]
 outdat <- outdat[order(outdat$p.value),]
 head(outdat)
 
-#write.table(outdat, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_DESeq2.DE_results.P5e-2_C1.0_Mock_vs_PMTVWT_anno_pars_KEGG-In_KEGGREST.tsv", row.names=T, sep="\t")
-#write.table(outdat, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_DESeq2.DE_results.P5e-2_C1.0_Mock_vs_delta8K_anno_pars_KEGG-In_KEGGREST.tsv", row.names=T, sep="\t")
-
-#write.table(outdat, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_DESeq2.DE_results.PMTVWT-vs-Mock_KEGGREST.tsv", row.names=T, sep="\t")
-#write.table(outdat, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_DESeq2.DE_results.delta8K-vs-Mock_KEGGREST.tsv", row.names=T, sep="\t")
-
 
 ########
 #########
@@ -118,30 +112,3 @@ nta04712 <- pathview(gene.data  = geneList,
 
 
 ####################################################################################
-#https://bioinformatics-core-shared-training.github.io/cruk-summer-school-2018/RNASeq2018/html/06_Gene_set_testing.nb.html#clusterprofiler
-
-#KEGG enrichment analysis
-
-#####
-geneList <- DE.table %>% filter(padj < "0.05", !is.na(padj) ) 
-
-
-
-########
-#https://www.infoworld.com/article/3454356/how-to-merge-data-in-r-using-r-merge-dplyr-or-datatable.html
-#Merge DF
-
-outdat_PM <- outdat
-outdat_delta <- outdat
-
-joined_df <- merge(outdat_PM, outdat_delta, by.x = "pathway.code", 
-                   by.y = "pathway.code", all.x = T, all.y = T)
-
-#dataframe3 <- merge(outdat_PM, outdat_delta, by=c("pathway.code"),all=TRUE)
-
-write.table(joined_df, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_Delta8K-and-PMTVWT_vs_Mock_KEGGREST_join_all.tsv", row.names=T, sep="\t")
-write.table(joined_df, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_Delta8K-and-PMTVWT_vs_Mock_KEGGREST_join_DE-pval-0.05.tsv", row.names=T, sep="\t")
-
-
-#############################################
-

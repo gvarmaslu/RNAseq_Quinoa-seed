@@ -15,7 +15,6 @@ echo "run script for rna-seq-analysis"
 Trinity="/data/bioinfo/trinityrnaseq-Trinity-v2.6.5/Trinity"
 Trinity_path="/data/bioinfo/trinityrnaseq-Trinity-v2.6.5"
 work_dir=/home/gala0002/proj/proj_dir/
-#ref=/home/gala0002/proj/proj_Ramesh/Ref_Nicotiana_benthamiana/
 
 cd $work_dir
 

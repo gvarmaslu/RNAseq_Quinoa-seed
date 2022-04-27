@@ -52,7 +52,6 @@ filename=paste(lst1,".DESeq2.DE_results.P5e-2_C0.DE.subset_anno_AT-GIs.tsv" , se
 workdir="/Volumes/Mac_HD2/proj_dir/DESeq2_genes_Quinoa_Pas-vs-Reg-Tit/"
 #workdir="/Volumes/Mac_HD2/proj_dir/DESeq2_genes_Quinoa_Pas-vs-Reg/"
 #workdir="/Volumes/Mac_HD2/proj_dir/DESeq2_genes_Quinoa_Pas-vs-Tit/"
-#workdir="/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_sugar-beet/work/DESeq2_genes_WtPo-Cl/"
 
 DE.table <- read.delim(paste(workdir,filename, sep="/"))
 
@@ -238,7 +237,6 @@ dev.off()
 # dotplot(kk2, showCategory = 10, title = "Enriched Pathways" , split=".sign") + facet_grid(.~.sign)
 
 # write result to file
-#write.table(joined_df, file = "/Volumes/Mac_HD2/proj_Ramesh/RNA-seq_2020/RESULTS_2020_v4/all_DESeq2.DE_results.delta8K-PMTVWT-vs-Mock_gseKEGG_join_all-0.05.tsv", row.names=T, sep="\t")
 write.table(gse, file = "./KEGG_GSEA.tsv", row.names=F, sep="\t")
 write.table(kk, file = "./KEGG_ORA.tsv", row.names=F, sep="\t")
 

@@ -77,7 +77,6 @@ filename=paste(lst1,".DESeq2.DE_results.P1e-2_C1.DE.subset_anno_AT.tsv" , sep=""
 workdir="/home/gala0002/proj/proj_dir/DESeq2_genes_Quinoa_Pas-vs-Reg-Tit/"
 #workdir="/home/gala0002/proj/proj_dir/DESeq2_genes_Quinoa_Pas-vs-Reg/"
 #workdir="/home/gala0002/proj/proj_dir/DESeq2_genes_Quinoa_Pas-vs-Tit/"
-#workdir="/home/gala0002/proj/proj_Ramesh/RNA-seq_sugar-beet/work/DESeq2_genes_WtPo-Cl/"
 
 DE.table <- read.delim(paste(workdir,filename, sep="/"))
 
